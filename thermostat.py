@@ -21,7 +21,7 @@ def get_pressure() -> str:
     pressure = 'PR' + "{:.2f}".format(sense.get_pressure())
     print(f"{colors.CYAN}PRESSURE: {pressure}{colors.END}")
 
-    return pressure
+    return pressure + "\n"
 
 
 def get_humidity() -> str:
@@ -30,7 +30,7 @@ def get_humidity() -> str:
     humidity = 'HU' + "{:.2f}".format(sense.get_humidity())
     print(f"{colors.CYAN}HUMIDITY: {humidity}{colors.END}")
 
-    return humidity
+    return humidity + "\n"
 
 
 def get_room_temperature() -> str:
@@ -39,7 +39,7 @@ def get_room_temperature() -> str:
     temperature = 'TP' + "{:.2f}".format(room_temperature)
     print(f"{colors.CYAN}ROOM TEMPERATURE: {temperature}{colors.END}")
 
-    return temperature
+    return temperature + "\n"
 
 
 def get_desired_temperature() -> str:
@@ -48,7 +48,7 @@ def get_desired_temperature() -> str:
     temperature = 'TD' + "{:.2f}".format(desired_temperature)
     print(f"{colors.CYAN}DESIRED TEMPERATURE: {temperature}{colors.END}")
 
-    return temperature
+    return temperature + "\n"
 
 
 def get_fictive_power() -> str:
@@ -61,7 +61,7 @@ def get_fictive_power() -> str:
     fictive_power = 'PW' + "{:.2f}".format(power)
     print(f"{colors.CYAN}FICTIVE POWER: {fictive_power}{colors.END}")
 
-    return fictive_power
+    return fictive_power + "\n"
 
 
 def adjust_desired_temperature(threshold: float) -> None:
@@ -86,6 +86,11 @@ def process() -> None:
     global screen, sense
 
     # todo - introduce threads + manage priorities
+    #  current solution use polling meaning active waiting and therefore waste cpu cycles
+    #  we need to use wait_for_event method instead of get_events in a (blocking) thread
+    #  and react to the triggered events
+    #  we will also need additional threads to send the messages to the screen
+    #  finally we need semaphore to protect certain global variable and orchestrate the execution order
 
     try:
         while True:
