@@ -33,7 +33,10 @@ def get_humidity() -> str:
 
 
 def get_room_temperature() -> str:
-    global room_temperature
+    global room_temperature, sense
+
+    room_temperature = sense.get_temperature()
+
     return 'TP' + '{:.2f}'.format(room_temperature)
 
 
