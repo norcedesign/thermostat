@@ -4,7 +4,7 @@
 
 ## Thermostat numérique
 
-Multitasking program simulating the functionality of a digital thermostat using the sensors of a Sense Hat board, connected to a Raspberry Pi 4 Model B.
+Multitasking program simulating the functionality of a digital thermostat. This app uses the sensors of a Sense Hat board, connected to a Raspberry Pi 4 Model B.
 
 
 ## Installation
