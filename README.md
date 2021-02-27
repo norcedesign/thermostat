@@ -1,4 +1,4 @@
-# MGL849
+# Thermostat 
 
 **Laboratoire # 1**
 
