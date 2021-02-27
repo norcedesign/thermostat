@@ -4,10 +4,8 @@
 
 ## Thermostat numérique
 
-Programme multitâche simulant les fonctionnalités d’un thermostat numérique en utilisant les capteurs
-de la carte Sense Hat relié à une Raspberry Pi 3 Model B.
+Multitasking program simulating the functionality of a digital thermostat using the sensors of a Sense Hat board, connected to a Raspberry Pi 4 Model B.
 
-    Le langage de programmation est Python.
 
 ## Installation
 
